@@ -59,7 +59,7 @@ public class EnemyController : MonoBehaviour
 
     public IEnumerator MoveTo(Vector3 destination)
     {
-        while (Vector3.Distance(transform.position, destination) > 0.01f)
+        while (Vector3.Distance(transform.position, destination) > movementSpeed * TimeManager.deltaTime())
         {
             while (Game.state != Game.State.Play)
             {
